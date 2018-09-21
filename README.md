@@ -20,3 +20,7 @@
 ## Divisão de Tarefas
 
 
+## Atuador(extra)
+Quando tiver chovendo ou começando a chover, detector chuva AND tem alguem na sala avisa na sala para fechar janela
+
+
