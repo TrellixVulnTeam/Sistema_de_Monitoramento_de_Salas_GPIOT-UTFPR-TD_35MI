@@ -7,6 +7,10 @@ from datetime import datetime
 client = mqtt.Client()
 # conecta no broker
 client.connect("127.0.0.1", 1883)
+
+
+
+
 # TOPICOS 
 motion = "bloco/E/lab/E-302/SENSOR/MOVIMENTO/"
 lamp = "bloco/E/lab/E-302/SENSOR/LAMPADAS/"
