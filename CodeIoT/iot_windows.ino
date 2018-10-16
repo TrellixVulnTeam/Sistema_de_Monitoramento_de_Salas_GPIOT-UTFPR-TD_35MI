@@ -13,7 +13,7 @@ char status[];
 #define SSID_REDE     "IoTNetwork"    // nome da rede 
 #define SENHA_REDE    "sisiotmon"        // senha da rede 
 #define IP_BROKER     "192.168.0.9"       // IP DO BROKER LOCAL
-#define TOPICO         "bloco/E/lab/E-302/SENSOR/JANELAS/" //  IoT Windows
+#define TOPICO         "bloco/E/lab/302/SENSOR/JANELA/1" //  IoT Windows
 
 int switcher = d1;
 
@@ -32,7 +32,7 @@ void loop() {
   strcpy(getData,PegarDado());  
  
   delay(50);
-  ////////////////
+  
   VerificaConexoesWiFIEMQTT(); 
   
 if(!client.connected())
@@ -59,7 +59,6 @@ void initWiFi()
     Serial.print("Conectando-se na rede: ");
     Serial.println("qual e a senha");
     Serial.println("Aguarde");
-     
     reconectWiFi();
 }
 

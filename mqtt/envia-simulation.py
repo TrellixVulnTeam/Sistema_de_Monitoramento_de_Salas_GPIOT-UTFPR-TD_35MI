@@ -2,7 +2,8 @@
 import paho.mqtt.client as mqtt
 import random
 from time import sleep
-from datetime import datetime
+import datetime
+import pyautogui
 
 client = mqtt.Client()
 # conecta no broker
@@ -28,7 +29,12 @@ def sensors():
 
 
 while True:
-    # envia a publicação
-    sensors()
-    sleep(1)
+    menu = pyautogui.confirm(text='Status Janela', title='Simulador MQTT', buttons=['ON', 'OFF','SAIR'])
+    if menu=='ON': client.publish("home/sala/janela/01/status/","ON "+str(datetime.datetime.now()))
+    if menu=='OFF': client.publish("home/sala/janela/01/status/","OFF "+str(datetime.datetime.now()))
+    if menu=='SAIR': 
+        print "EXIT PROGRAMMM"
+        break
+
+    
     
