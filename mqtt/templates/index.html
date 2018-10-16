@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br" >
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>DashBoard</title>
+  
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+      <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat:200,300,400,600,700'>
+      <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
+      
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+	
+<div class="jumbotron">
+   <h1>Visualização Janela </h1>
+
+
+   <p class="lead">Status das Janelas</p>
+  </div>
+<br><br>
+<div class="container">
+  
+  <div class="row">
+
+    <div class="col-sm-2">
+      <h5 class="h1">Ambiente: </h5>
+    </div>
+
+    <div class="col-sm-4">
+      <p class="h2"><kbd>  {{ parametro.Ambiente }} </kbd> </p>
+    </div>
+    
+    <div class="col-sm-2">
+      <h5 class="h1"> IoT: </h5>
+    </div>
+
+    <div class="col-sm-4">
+       <p class="display-4"> {{ parametro.IoT }} </p>
+    </div>
+    <div class="col-sm-2">
+       <h5 class="h1"> ID: </h5>
+    </div>
+
+    <div class="col-sm-4">
+       <p class="display-4"> {{ parametro.ID }} </p>
+    </div>
+
+    <div class="col-sm-2">
+      <h5 class="h1"> Status: </h5>
+    </div>
+
+    <div class="col-sm-4">
+       <p class="display-4">
+       	{% if parametro.status == 1 %}
+         ON
+        {% else %}
+         OFF
+        {% endif %}</p>
+    </div>
+
+    <div class="col-sm-2">
+      <h5 class="h1"> Data: </h5>
+    </div>
+
+    <div class="col-sm-4">
+       <p class="display-4"> {{ parametro.Data }} </p>
+    </div>
+    <div class="col-sm-2">
+      <h5 class="h1"> Hora: </h5>
+    </div>
+
+    <div class="col-sm-4">
+       <p class="display-4"> {{ parametro.Hora }} </p>
+    </div>
+  </div>
+  
+ 
+  </div>
+ </div>
+ </div>
+
+
+
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js'></script>
+
+  
+
+</body>
+
+</html>

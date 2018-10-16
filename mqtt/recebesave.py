@@ -18,7 +18,7 @@ def pre_processing(topic,payload):
     ID = topic.split("/")[3]
     status = 1 if payload.split(" ")[0]=="ON" else 0
     data =  payload.split(" ")[1]
-    hora = payload.split(" ")[2]
+    hora = payload.split(" ")[2].split(".")[0]
     dados = [ambiente,IoT,ID,status,data,hora]
     return [["AMBIENTE","DEVICE","ID","STATUS","DATA","HORA"],dados]
 
