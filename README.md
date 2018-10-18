@@ -15,7 +15,18 @@
 
 ## Prototipo 
 * Construir uma dashboard para ler os dados salvos do IoT
-* Prototipar um IoT com switch para ler status de porta e janela, sensor de luz para lampadas, sensor de movimento
+* Prototipar um IoT com switch para ler status:
+-  porta 
+-  janela ======> OK Completo com dashboard e leitura do sensor
+- sensor de luz 
+- sensor de movimento
+
+## DashBoard de Monitoramento de Status de janela
+
+![Banana](janeladash.png)
+
+## Eletronica da Janela 
+![Banana](node_sensor_janela_bb.png)
 
 ## Divisão de Tarefas
 
