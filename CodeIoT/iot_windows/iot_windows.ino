@@ -1,5 +1,5 @@
 #include <string.h>
-#include <ESP8266WiFi.h>  //essa biblioteca já vem com a IDE. Portanto, não é preciso baixar nenhuma biblioteca adicional
+#include <ESP8266WiFi.h>  //essa biblioteca jï¿½ vem com a IDE. Portanto, nï¿½o ï¿½ preciso baixar nenhuma biblioteca adicional
 #include <PubSubClient.h> // Importa a Biblioteca PubSubClient
 
 
@@ -8,14 +8,14 @@ WiFiClient client;
 long ultimo_envio;
 PubSubClient MQTT(clientMQTT); // Instancia o Cliente MQTT passando o objeto clientMQTT
 
-char status[];
+int states;
 
-#define SSID_REDE     "IoTNetwork"    // nome da rede 
-#define SENHA_REDE    "sisiotmon"        // senha da rede 
-#define IP_BROKER     "192.168.0.9"       // IP DO BROKER LOCAL
+#define SSID_REDE     "tapodi"    // nome da rede 
+#define SENHA_REDE    "naolembro"        // senha da rede 
+#define IP_BROKER     "192.168.100.10"       // IP DO BROKER LOCAL
 #define TOPICO         "bloco/E/lab/302/SENSOR/JANELA/1" //  IoT Windows
 
-int switcher = d1;
+int switcher = 13;
 
 void setup(){
   Serial.begin(115200);
@@ -40,7 +40,7 @@ if(!client.connected())
         VerificaConexoesWiFIEMQTT(); 
     }
  
-    //verifica se é o momento de enviar informações via MQTT
+    //verifica se ï¿½ o momento de enviar informaï¿½ï¿½es via MQTT
     if ((millis() - ultimo_envio) > 100)
     {
         
@@ -66,7 +66,7 @@ void initWiFi()
 void initMQTT() 
 {
     MQTT.setServer(IP_BROKER, 1883);   //informa qual broker e porta deve ser conectado
-    MQTT.setCallback(mqtt_callback);            //atribui função de callback (função chamada quando qualquer informação de um dos tópicos subescritos chega)
+    MQTT.setCallback(mqtt_callback);            //atribui funï¿½ï¿½o de callback (funï¿½ï¿½o chamada quando qualquer informaï¿½ï¿½o de um dos tï¿½picos subescritos chega)
 }
 
 void mqtt_callback(char* topic, byte* payload, unsigned int length) 
@@ -120,17 +120,17 @@ void reconnectMQTT()
 void VerificaConexoesWiFIEMQTT(void)
 {
     if (!MQTT.connected()) 
-        reconnectMQTT(); //se não há conexão com o Broker, a conexão é refeita
+        reconnectMQTT(); //se nï¿½o hï¿½ conexï¿½o com o Broker, a conexï¿½o ï¿½ refeita
      
-     reconectWiFi(); //se não há conexão com o WiFI, a conexão é refeita
+     reconectWiFi(); //se nï¿½o hï¿½ conexï¿½o com o WiFI, a conexï¿½o ï¿½ refeita
 }
 
  
 char* PegarDado(){
   long ID  = 01;  /// change ID DO IOT 
-  status  =   digitalRead(switcher);
+  states  =   digitalRead(switcher);
 
   static char data[100];
-  sprintf(data, "ID: %lu; status: %lu;", ID, status);
+  sprintf(data, "ID: %lu; status: %d;", ID, states);
   return data;
 }
