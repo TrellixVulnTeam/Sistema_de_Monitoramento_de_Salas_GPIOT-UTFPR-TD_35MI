@@ -25,9 +25,12 @@
 
 ![Banana](janeladash.png)
 
-## Eletronica da Janela 
+## ~~Eletronica da Janela~~  Não Funcionou 
+
 ![Banana](node_sensor_janela_bb.png)
 
+## Eletronica que funcionou 
+![Banana](https://killerrobotics.files.wordpress.com/2015/09/lever-switch_bb.png)
 ## Divisão de Tarefas
 
 
