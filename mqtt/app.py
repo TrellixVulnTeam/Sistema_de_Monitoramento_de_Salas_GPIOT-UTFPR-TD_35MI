@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 from flask import Flask,render_template,request 
   
-
+# "bloco/E/lab/302/SENSOR/JANELA/1"
 def atual():
  df = pd.read_csv('home.csv')
  leitura = len(df)

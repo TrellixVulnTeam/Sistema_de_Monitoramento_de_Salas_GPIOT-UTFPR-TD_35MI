@@ -9,7 +9,8 @@ client = mqtt.Client()
 # conecta no broker
 client.connect("127.0.0.1", 1883)
 
-
+# "bloco/E/lab/302/SENSOR/JANELA/1
+# "home/sala/janela/01/status/"
 while True:
     menu = pyautogui.confirm(text='Status Janela', title='Simulador MQTT', buttons=['ON', 'OFF','SAIR'])
     if menu=='ON': client.publish("home/sala/janela/01/status/","ON "+str(datetime.datetime.now()))
