@@ -12,8 +12,9 @@ int states;
 
 #define SSID_REDE     "tapodi"    // nome da rede 
 #define SENHA_REDE    "naolembro"        // senha da rede 
-#define IP_BROKER     "192.168.100.10"       // IP DO BROKER LOCAL
-#define TOPICO         "bloco/E/lab/302/SENSOR/JANELA/1" //  IoT Windows
+#define IP_BROKER     "192.168.100.3"       // IP DO BROKER LOCAL
+#define TOPICO         "home/sala/janela/01/status/" //  IoT Windows
+// "bloco/E/lab/302/SENSOR/JANELA/1"
 
 int switcher = 13;
 
@@ -43,8 +44,8 @@ if(!client.connected())
     //verifica se � o momento de enviar informa��es via MQTT
     if ((millis() - ultimo_envio) > 100)
     {
-        
-        MQTT.publish(TOPICO, getData);
+         Serial.println(getData);
+         MQTT.publish(TOPICO, getData);
          ultimo_envio = millis();
     }
     
@@ -127,10 +128,8 @@ void VerificaConexoesWiFIEMQTT(void)
 
  
 char* PegarDado(){
-  long ID  = 01;  /// change ID DO IOT 
   states  =   digitalRead(switcher);
-
   static char data[100];
-  sprintf(data, "ID: %lu; status: %d;", ID, states);
+  sprintf(data, "%d ",states);
   return data;
 }

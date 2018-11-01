@@ -2,7 +2,7 @@
 import paho.mqtt.client as mqtt
 import csv 
 from time import sleep
-
+import datetime
  
 TOPIC = "home/#"
 
@@ -16,7 +16,7 @@ def pre_processing(topic,payload):
     ambiente = topic.split("/")[1] 
     IoT = topic.split("/")[2] 
     ID = topic.split("/")[3]
-    status = 1 if payload.split(" ")[0]=="ON" else 0
+    status = 1 if payload.split(" ")[0]=="1" else 0
     data =  payload.split(" ")[1]
     hora = payload.split(" ")[2].split(".")[0]
     dados = [ambiente,IoT,ID,status,data,hora]
@@ -38,9 +38,10 @@ def on_connect(self,client, data, rc):
 
  
 def on_message(client, userdata, msg):
-    print "TOPICO: ",msg.topic,"payload: ",str(msg.payload)
-    gravar_dado("home.csv",str(msg.topic),str(msg.payload))
-    
+    Payload = str(msg.payload) + str(datetime.datetime.now())
+    print "TOPICO: ",msg.topic,"payload: ",str(Payload)
+    gravar_dado("home.csv",str(msg.topic),Payload)
+    #sleep(5)
 
 
 # clia um cliente para supervisã0
@@ -51,7 +52,7 @@ client.on_connect = on_connect
 client.on_message = on_message
 
 # conecta no broker
-client.connect("192.168.100.3", 1883)
+client.connect("127.0.0.1", 1883)
 
 # permace em loop, recebendo mensagens
 client.loop_forever()

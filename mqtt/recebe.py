@@ -2,7 +2,7 @@
 import paho.mqtt.client as mqtt
 
 from time import sleep
-
+import datetime 
 # assinando todas as publicações dentro da area 10
 TOPIC = "#"
 
@@ -14,11 +14,11 @@ def on_connect(self,client, data, rc):
 # função chamada quando uma nova mensagem do tópico é gerada
 def on_message(client, userdata, msg):
     # decodificando o valor recebido
-    
+    payload = str(msg.payload) + str(datetime.datetime.now())
     #print msg.topic + "/" + str(v)
-    
-    print "TOPICO: ",msg.topic,"payload: ",str(msg.payload)
-    
+    print "TOPICO: ",msg.topic
+    print "payload: ",payload
+ 
 
 # clia um cliente para supervisã0
 client = mqtt.Client()
