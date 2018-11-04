@@ -1,6 +1,7 @@
 #include <string.h>
 #include <ESP8266WiFi.h>  //essa biblioteca j� vem com a IDE. Portanto, n�o � preciso baixar nenhuma biblioteca adicional
 #include <PubSubClient.h> // Importa a Biblioteca PubSubClient
+#include <Ultrasonic.h>
 
 
 WiFiClient clientMQTT;
@@ -12,18 +13,30 @@ int states;
 
 #define SSID_REDE     "tapodi"    // nome da rede 
 #define SENHA_REDE    "naolembro"        // senha da rede 
-#define IP_BROKER     "192.168.43.32"       // IP DO BROKER LOCAL
-#define TOPICO         "home/sala/janela/01/status/" //  IoT Windows
-// "bloco/E/lab/302/SENSOR/JANELA/1"
+#define IP_BROKER     "192.168.100.3"       // IP DO BROKER LOCAL
+#define TOPICO         "home/sala/porta/01/status/" //  IoT Windows
 
-int switcher = 13;
+
+#define pino_trigger_1 D7
+#define pino_echo_1 D8
+
+#define pino_trigger_2 D1 
+#define pino_echo_2 D2
+ 
+Ultrasonic ultrasonic_1(pino_trigger_1, pino_echo_1);
+Ultrasonic ultrasonic_2(pino_trigger_2, pino_echo_2);
+float cm1,cm2;
+
+
+
 
 void setup(){
   Serial.begin(115200);
   initWiFi();
   initMQTT();
   ultimo_envio = 0;
-  pinMode(switcher,INPUT);
+  Serial.println("Lendo dados do sensor...");
+
   
 }
 
@@ -128,8 +141,12 @@ void VerificaConexoesWiFIEMQTT(void)
 
  
 char* PegarDado(){
-  states  =   digitalRead(switcher);
+  long microsec1 = ultrasonic_1.timing();
+  long microsec2 = ultrasonic_2.timing();
+  cm1 = ultrasonic_1.convert(microsec1, Ultrasonic::CM);
+  cm2 = ultrasonic_2.convert(microsec2, Ultrasonic::CM);
+   
   static char data[100];
-  sprintf(data, "%d ",states);
+  sprintf(data, "%f %f ",cm1,cm2);
   return data;
 }
