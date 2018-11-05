@@ -1,23 +1,58 @@
 # -*- coding: cp1252 -*-
 import paho.mqtt.client as mqtt
-
+import csv 
 from time import sleep
 import datetime 
 # assinando todas as publicações dentro da area 10
-TOPIC = "#"
+TOPIC = "home/#"
 
-# função chamada quando a conexão for realizada, sendo
-# então realizada a subscrição
+def csv_writer(data,path):
+    with open(path, "wb") as csv_file:
+        writer = csv.writer(csv_file, delimiter=',')
+        for line in data:
+             writer.writerow(line)
+
+def pre_processing(topic,payload):
+    #print " +  ",payload
+    ambiente = topic.split("/")[1] 
+    IoT = topic.split("/")[2] 
+    ID = topic.split("/")[3]
+    status = payload.split(" ")[0]+" "+payload.split(" ")[1] # USAR AQUI VALOR DE TEM PESSOA OU NAO
+    data = payload.split(" ")[2].split(".")[0]  
+    hora =  payload.split(" ")[3]
+    dados = [ambiente,IoT,ID,status,data,hora]
+    #print dados
+    return [["AMBIENTE","DEVICE","ID","STATUS","DATA","HORA"],dados]
+
+def gravar_dado(arquivo,topic,payload):
+ with open(arquivo,'a') as log:
+        dados = pre_processing(topic,payload)
+        print dados[0]
+        print dados[1]
+        writer = csv.writer(log,delimiter=",")
+        writer.writerow(dados[1])       
+        print "*" * 50 ,"\n\t\tGRAVADO no CSV\n","*" * 50
+         
+         
+
+
+def passagem_count(value):
+
+    pass 
+
 def on_connect(self,client, data, rc):
     self.subscribe([(TOPIC,0)])
 
-# função chamada quando uma nova mensagem do tópico é gerada
 def on_message(client, userdata, msg):
-    # decodificando o valor recebido
-    payload = str(msg.payload) + str(datetime.datetime.now())
-    #print msg.topic + "/" + str(v)
-    print "TOPICO: ",msg.topic
-    print "payload: ",payload
+    Payload = str(msg.payload) + str(datetime.datetime.now())
+    print "TOPICO: ",msg.topic,"payload: ",str(Payload),"\n\n"
+    gravar_dado("passagem.csv",str(msg.topic),Payload)
+    #dados = pre_processing(msg.topic,Payload)
+    #print dados
+    #data = str(msg.payload)
+    #print data
+    #print passagem_count(data)
+    sleep(0.05)
  
 
 # clia um cliente para supervisã0
