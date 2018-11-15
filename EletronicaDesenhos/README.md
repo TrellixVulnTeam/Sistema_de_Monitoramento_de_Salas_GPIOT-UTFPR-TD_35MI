@@ -23,6 +23,5 @@
 ### Nota Extra
 - O sensor de passagem ainda não foi implementado na dashboard
 
-![Banana](https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif)
 
 
