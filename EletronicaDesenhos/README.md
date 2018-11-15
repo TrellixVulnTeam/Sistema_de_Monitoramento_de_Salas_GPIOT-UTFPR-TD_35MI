@@ -6,8 +6,10 @@
 
 ![Banana](sensores1.jpeg)
 
+
+
 ## Sensor de Janela Desenho
-![Banana](sensor_janela.png)
+![Banana](https://killerrobotics.files.wordpress.com/2015/09/lever-switch_bb.png)
 
 ## Sensor de Janela Aplicado 
 ![Banana](sensores4.jpeg)
