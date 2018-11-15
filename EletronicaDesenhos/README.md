@@ -23,6 +23,5 @@
 ### Nota Extra
 - O sensor de passagem ainda não foi implementado na dashboard
 
-![Banana](http://cdn.osxdaily.com/wp-content/uploads/2013/07/dancing-banana.gif)
 
 
