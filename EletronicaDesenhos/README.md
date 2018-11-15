@@ -1,26 +1,28 @@
-## Sensores de Passagem Desenho
+
+## Sensores e Desenhos
+### Sensores de Passagem Desenho
 
 ![Banana](SensorDePassagem_bb.png)
 
-## Sensores de Passagem Aplicado 
+### Sensores de Passagem Aplicado 
 
-![Banana](sensores1.jpeg)
-
-
-
-## Sensor de Janela Desenho
-![Banana](https://killerrobotics.files.wordpress.com/2015/09/lever-switch_bb.png)
-
-## Sensor de Janela Aplicado 
-![Banana](sensores4.jpeg)
-
-## Sensores 
-
-![Banana](sensores2.jpeg)
-![Banana](sensores3.jpeg)
+![Banana](sensores5.jpeg)
 
 
-## Nota Extra
+### Sensor de Janela Desenho
+![Banana](SensorDeJanela_bb.png)
+
+### Sensor de Janela Aplicado 
+![Banana](sensores6.jpeg)
+
+### Sensores 
+
+![Banana](sensores7.jpeg)
+
+
+### Nota Extra
 - O sensor de passagem ainda não foi implementado na dashboard
+
+![Banana](http://cdn.osxdaily.com/wp-content/uploads/2013/07/dancing-banana.gif)
 
 
