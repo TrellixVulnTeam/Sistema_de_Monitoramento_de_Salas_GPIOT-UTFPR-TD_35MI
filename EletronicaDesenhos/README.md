@@ -12,7 +12,7 @@
 |----------------------------------------------------------------------|---|---|---|---
 | Viewer desktop | <img src='sensores02.jpeg'   width='250'/>  | <img src='sensores04.jpeg'   width='250'/>   |  <img src='sensores06.jpeg'   width='250'/> |   
 | server viewer  |  <img src='sensores01.jpeg'   width='250'/> | <img src='sensores03.jpeg'   width='250'/>  |   |   
-| Viewer smartphone |   |   |   |   
+| Viewer smartphone |  <img src='view1.jpeg'   width='250'/> | <img src='view2.jpeg'   width='250'/>     |   |   
 
 
 ### Nota Extra
