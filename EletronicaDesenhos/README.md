@@ -22,12 +22,12 @@
 <img src="sensores7.jpeg"  width="500"/>
 
 ### Web Dashboard Viewer
-<img src='sensores01.jpeg'   width='500'/>
-<img src='sensores02.jpeg'   width='500'/>
-<img src='sensores03.jpeg'   width='500'/>
-<img src='sensores04.jpeg'   width='500'/>
-<img src='sensores05.jpeg'   width='500'/>
-<img src='sensores06.jpeg'   width='500'/>
+<img src='sensores01.jpeg'   width='250'/>
+<img src='sensores02.jpeg'   width='250'/>
+<img src='sensores03.jpeg'   width='250'/>
+<img src='sensores04.jpeg'   width='250'/>
+<img src='sensores05.jpeg'   width='250'/>
+<img src='sensores06.jpeg'   width='250'/>
 
 ### Nota Extra
 - O sensor de passagem ainda não foi implementado na dashboard 
