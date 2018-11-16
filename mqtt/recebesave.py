@@ -12,19 +12,31 @@ def csv_writer(data,path):
         for line in data:
              writer.writerow(line)
 
-def pre_processing(topic,payload):
-    ambiente = topic.split("/")[1] 
-    IoT = topic.split("/")[2] 
-    ID = topic.split("/")[3]
-    status = 1 if payload.split(" ")[0]=="1" else 0
-    data =  payload.split(" ")[1]
-    hora = payload.split(" ")[2].split(".")[0]
-    dados = [ambiente,IoT,ID,status,data,hora]
-    return [["AMBIENTE","DEVICE","ID","STATUS","DATA","HORA"],dados]
+def pre_processing(topic,payload,opcao):
+    if opcao==0:
+        ambiente = topic.split("/")[1] 
+        IoT = topic.split("/")[2] 
+        ID = topic.split("/")[3]
+        status = 1 if payload.split(" ")[0]=="1" else 0
+        data =  payload.split(" ")[1]
+        hora = payload.split(" ")[2].split(".")[0]
+        dados = [ambiente,IoT,ID,status,data,hora]
+        return [["AMBIENTE","DEVICE","ID","STATUS","DATA","HORA"],dados]
+    if opcao==1:
+        ambiente = topic.split("/")[1] 
+        IoT = topic.split("/")[2] 
+        ID = topic.split("/")[3]
+        status = payload.split(" ")[0]+" "+payload.split(" ")[1] # USAR AQUI VALOR DE TEM PESSOA OU NAO
+        data = payload.split(" ")[2].split(".")[0]  
+        hora =  payload.split(" ")[3]
+        dados = [ambiente,IoT,ID,status,data,hora]
+        return [["AMBIENTE","DEVICE","ID","STATUS","DATA","HORA"],dados]
 
-def gravar_dado(arquivo,topic,payload):
+
+
+def gravar_dado(arquivo,topic,payload,opcao):
  with open(arquivo,'a') as log:
-        dados = pre_processing(topic,payload)
+        dados = pre_processing(topic,payload,opcao)
         writer = csv.writer(log,delimiter=",")
         writer.writerow(dados[1])       
         print "*" * 50 ,"\n\t\tGRAVADO no CSV\n","*" * 50
@@ -38,9 +50,14 @@ def on_connect(self,client, data, rc):
 
  
 def on_message(client, userdata, msg):
-    Payload = str(msg.payload) + str(datetime.datetime.now())
-    print "TOPICO: ",msg.topic,"payload: ",str(Payload)
-    gravar_dado("home.csv",str(msg.topic),Payload)
+    if ("/sala/janela/01/status/" in msg.topic):
+     Payload = str(msg.payload) + str(datetime.datetime.now())
+     print "TOPICO: ",msg.topic,"payload: ",str(Payload)
+     gravar_dado("home.csv",str(msg.topic),Payload,0)
+    if ("home/sala/porta/01/status/" in msg.topic):
+     Payload = str(msg.payload) + str(datetime.datetime.now())
+     print "TOPICO: ",msg.topic,"payload: ",str(Payload)
+     gravar_dado("passagem.csv",str(msg.topic),Payload,1)
     #sleep(5)
 
 

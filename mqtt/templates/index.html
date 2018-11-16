@@ -69,11 +69,7 @@
 
     <div class="col-sm-4">
        <p class="display-4">
-       	{% if parametro.status == 0 %}
-         ABERTA
-        {% else %}
-         FECHADO
-        {% endif %}</p>
+       	 {{ parametro.status }}</p>
     </div>
 
     <div class="col-sm-2">
@@ -91,7 +87,58 @@
        <p class="display-4"> {{ parametro.Hora }} </p>
     </div>
   </div>
-  
+ 
+ <br><br>
+ <div class="row">
+
+    <div class="col-sm-2">
+      <h5 class="h1">Ambiente: </h5>
+    </div>
+
+    <div class="col-sm-4">
+      <p class="h2"><kbd>  {{ dado.Ambiente }} </kbd> </p>
+    </div>
+    
+    <div class="col-sm-2">
+      <h5 class="h1"> IoT: </h5>
+    </div>
+
+    <div class="col-sm-4">
+       <p class="display-4"> {{ dado.IoT }} </p>
+    </div>
+    <div class="col-sm-2">
+       <h5 class="h1"> ID: </h5>
+    </div>
+
+    <div class="col-sm-4">
+       <p class="display-4"> {{ dado.ID }} </p>
+    </div>
+
+    <div class="col-sm-2">
+      <h5 class="h1"> Status: </h5>
+    </div>
+
+    <div class="col-sm-4">
+       <p class="display-4">
+         {{ dado.status }}</p>
+    </div>
+
+    <div class="col-sm-2">
+      <h5 class="h1"> Data: </h5>
+    </div>
+
+    <div class="col-sm-4">
+       <p class="display-4"> {{ dado.Data }} </p>
+    </div>
+    <div class="col-sm-2">
+      <h5 class="h1"> Hora: </h5>
+    </div>
+
+    <div class="col-sm-4">
+       <p class="display-4"> {{ dado.Hora }} </p>
+    </div>
+  </div>
+   
  
   </div>
  </div>

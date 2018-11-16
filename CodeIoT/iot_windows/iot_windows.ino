@@ -12,11 +12,11 @@ int states;
 
 #define SSID_REDE     "tapodi"    // nome da rede 
 #define SENHA_REDE    "naolembro"        // senha da rede 
-#define IP_BROKER     "192.168.43.32"       // IP DO BROKER LOCAL
+#define IP_BROKER     "192.168.100.3"       // IP DO BROKER LOCAL
 #define TOPICO         "home/sala/janela/01/status/" //  IoT Windows
 // "bloco/E/lab/302/SENSOR/JANELA/1"
 
-int switcher = 13;
+int switcher = D8;
 
 void setup(){
   Serial.begin(115200);

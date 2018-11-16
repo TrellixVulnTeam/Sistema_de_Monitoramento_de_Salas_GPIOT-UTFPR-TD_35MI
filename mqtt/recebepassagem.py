@@ -27,11 +27,11 @@ def pre_processing(topic,payload):
 def gravar_dado(arquivo,topic,payload):
  with open(arquivo,'a') as log:
         dados = pre_processing(topic,payload)
-        print dados[0]
-        print dados[1]
+        #print dados[0]
+        #print dados[1]
         writer = csv.writer(log,delimiter=",")
         writer.writerow(dados[1])       
-        print "*" * 50 ,"\n\t\tGRAVADO no CSV\n","*" * 50
+        print "*" * 20 ,"GRAVADO no CSV","*" * 20
          
          
 
@@ -45,13 +45,11 @@ def on_connect(self,client, data, rc):
 
 def on_message(client, userdata, msg):
     Payload = str(msg.payload) + str(datetime.datetime.now())
-    print "TOPICO: ",msg.topic,"payload: ",str(Payload),"\n\n"
-    gravar_dado("passagem.csv",str(msg.topic),Payload)
-    #dados = pre_processing(msg.topic,Payload)
-    #print dados
-    #data = str(msg.payload)
-    #print data
-    #print passagem_count(data)
+    if "home/sala/porta/" in msg.topic: 	
+     print "TOPICO: ",msg.topic,"payload: ",str(Payload),"\n\n"
+     gravar_dado("passagem.csv",str(msg.topic),Payload)
+    #if "porta" in msg.topic:
+    # print "TOPICO: ",msg.topic,"payload: ",str(Payload),"\n\n"
     sleep(0.05)
  
 
