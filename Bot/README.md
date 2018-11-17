@@ -16,9 +16,16 @@
 /luminosidade => ler dados de luz para saber se as luzes estão ligadas
 
 ## Print
+| Image1 |              Image2      |
+|--------------------------|---------|
+|![Banana](chatbot1.jpeg) |  ![Banana](chatbot2.jpeg) |
 
-![Banana](chatbot1.jpeg)
-
-![Banana](chatbot2.jpeg)
+## Bibliotecas usadas
+| Lib | Descrição |
+|-----|-----------|
+| time | tempo    |
+| telepot | api telegram |
+| numpt | calculo numerico |
+| pamdas | data science | 
 
 
