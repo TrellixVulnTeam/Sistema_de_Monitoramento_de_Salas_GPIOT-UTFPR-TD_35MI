@@ -23,7 +23,7 @@
 
 ## DashBoard de Monitoramento de Status de janela
 
-![Banana](janeladash.png)
+![Banana](luminosidade.png)
 
 
 ## Atuador(extra)
