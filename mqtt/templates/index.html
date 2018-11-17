@@ -30,10 +30,10 @@
 
 
 <div class="jumbotron">
-   <h1>Visualização Janela </h1>
+   <h1 class="display-2">Visualização Janela </h1>
 
 
-   <p class="lead">Status das Janelas</p>
+   <p class="display-3">Status das Janelas</p>
   </div>
 <br><br>
 <div class="container">
@@ -45,7 +45,7 @@
     </div>
 
     <div class="col-sm-4">
-      <p class="h2"><kbd>  {{ parametro.Ambiente }} </kbd> </p>
+      <p class="h2"><kbd>  {{ janela.Ambiente }} </kbd> </p>
     </div>
     
     <div class="col-sm-2">
@@ -53,14 +53,14 @@
     </div>
 
     <div class="col-sm-4">
-       <p class="display-4"> {{ parametro.IoT }} </p>
+       <p class="display-4"> {{ janela.IoT }} </p>
     </div>
     <div class="col-sm-2">
        <h5 class="h1"> ID: </h5>
     </div>
 
     <div class="col-sm-4">
-       <p class="display-4"> {{ parametro.ID }} </p>
+       <p class="display-4"> {{ janela.ID }} </p>
     </div>
 
     <div class="col-sm-2">
@@ -69,7 +69,7 @@
 
     <div class="col-sm-4">
        <p class="display-4">
-       	 {{ parametro.status }}</p>
+       	 {{ janela.status }}</p>
     </div>
 
     <div class="col-sm-2">
@@ -77,14 +77,14 @@
     </div>
 
     <div class="col-sm-4">
-       <p class="display-4"> {{ parametro.Data }} </p>
+       <p class="display-4"> {{ janela.Data }} </p>
     </div>
     <div class="col-sm-2">
       <h5 class="h1"> Hora: </h5>
     </div>
 
     <div class="col-sm-4">
-       <p class="display-4"> {{ parametro.Hora }} </p>
+       <p class="display-4"> {{ janela.Hora }} </p>
     </div>
   </div>
  
@@ -96,7 +96,7 @@
     </div>
 
     <div class="col-sm-4">
-      <p class="h2"><kbd>  {{ dado.Ambiente }} </kbd> </p>
+      <p class="h2"><kbd>  {{ luminosidade.Ambiente }} </kbd> </p>
     </div>
     
     <div class="col-sm-2">
@@ -104,14 +104,14 @@
     </div>
 
     <div class="col-sm-4">
-       <p class="display-4"> {{ dado.IoT }} </p>
+       <p class="display-4"> {{ luminosidade.IoT }} </p>
     </div>
     <div class="col-sm-2">
        <h5 class="h1"> ID: </h5>
     </div>
 
     <div class="col-sm-4">
-       <p class="display-4"> {{ dado.ID }} </p>
+       <p class="display-4"> {{ luminosidade.ID }} </p>
     </div>
 
     <div class="col-sm-2">
@@ -120,7 +120,7 @@
 
     <div class="col-sm-4">
        <p class="display-4">
-         {{ dado.status }}</p>
+         {{ luminosidade.status }}</p>
     </div>
 
     <div class="col-sm-2">
@@ -128,17 +128,67 @@
     </div>
 
     <div class="col-sm-4">
-       <p class="display-4"> {{ dado.Data }} </p>
+       <p class="display-4"> {{ luminosidade.Data }} </p>
     </div>
     <div class="col-sm-2">
       <h5 class="h1"> Hora: </h5>
     </div>
 
     <div class="col-sm-4">
-       <p class="display-4"> {{ dado.Hora }} </p>
+       <p class="display-4"> {{ luminosidade.Hora }} </p>
     </div>
   </div>
    
+ <br><br>
+ <div class="row">
+
+    <div class="col-sm-2">
+      <h5 class="h1">Ambiente: </h5>
+    </div>
+
+    <div class="col-sm-4">
+      <p class="h2"><kbd>  {{ door.Ambiente }} </kbd> </p>
+    </div>
+    
+    <div class="col-sm-2">
+      <h5 class="h1"> IoT: </h5>
+    </div>
+
+    <div class="col-sm-4">
+       <p class="display-4"> {{ door.IoT }} </p>
+    </div>
+    <div class="col-sm-2">
+       <h5 class="h1"> ID: </h5>
+    </div>
+
+    <div class="col-sm-4">
+       <p class="display-4"> {{ door.ID }} </p>
+    </div>
+
+    <div class="col-sm-2">
+      <h5 class="h1"> Status: </h5>
+    </div>
+
+    <div class="col-sm-4">
+       <p class="display-4">
+         {{ door.status }}</p>
+    </div>
+
+    <div class="col-sm-2">
+      <h5 class="h1"> Data: </h5>
+    </div>
+
+    <div class="col-sm-4">
+       <p class="display-4"> {{ door.Data }} </p>
+    </div>
+    <div class="col-sm-2">
+      <h5 class="h1"> Hora: </h5>
+    </div>
+
+    <div class="col-sm-4">
+       <p class="display-4"> {{ door.Hora }} </p>
+    </div>
+  </div>
  
   </div>
  </div>

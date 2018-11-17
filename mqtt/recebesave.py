@@ -26,10 +26,11 @@ def pre_processing(topic,payload,opcao):
         ambiente = topic.split("/")[1] 
         IoT = topic.split("/")[2] 
         ID = topic.split("/")[3]
-        status = payload.split(" ")[0]+" "+payload.split(" ")[1] # USAR AQUI VALOR DE TEM PESSOA OU NAO
-        data = payload.split(" ")[2].split(".")[0]  
-        hora =  payload.split(" ")[3]
+        status = payload.split(" ")[0]+" "+payload.split(" ")[1]+" "+payload.split(" ")[2]
+        data = payload.split(" ")[3].split(".")[0]  
+        hora =  payload.split(" ")[4]
         dados = [ambiente,IoT,ID,status,data,hora]
+        print dados
         return [["AMBIENTE","DEVICE","ID","STATUS","DATA","HORA"],dados]
 
 
@@ -58,7 +59,11 @@ def on_message(client, userdata, msg):
      Payload = str(msg.payload) + str(datetime.datetime.now())
      print "TOPICO: ",msg.topic,"payload: ",str(Payload)
      gravar_dado("passagem.csv",str(msg.topic),Payload,1)
-    #sleep(5)
+    if ("home/sala/luminosidade/01/status/" in msg.topic): 
+     Payload = str(msg.payload) + str(datetime.datetime.now())
+     print "TOPICO: ",msg.topic,"payload: ",str(Payload)
+     gravar_dado("luminosidade.csv",str(msg.topic),Payload,1)
+     sleep(0.1)
 
 
 # clia um cliente para supervisã0
