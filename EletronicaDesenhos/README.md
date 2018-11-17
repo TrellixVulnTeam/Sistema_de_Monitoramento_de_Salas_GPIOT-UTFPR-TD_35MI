@@ -5,7 +5,8 @@
 |----------------------------------------------------------------------|---|---|---|---
 |Passagem | <img src="SensorDePassagem_bb.png" width="500"/>  |  <img src="sensores5.jpeg"   width="500"/> |   |   
 | Janela  |  <img src="SensorDeJanela_bb.png"   width="250"/> |  <img src="sensores6.jpeg"   width="500"/> |   |   
-|   All   | <img src="sensores7.jpeg"  width="500"/>  |   |   |   
+| Luminosidade  |  <img src="SensorLuminosidade.png"   width="250"/> |  <img src="s1.jpeg"   width="500"/> |   |   
+|   All   | <img src="sensores7.jpeg"  width="500"/>  |  <img src="s2.jpeg"   width="500"/>  |   |   
 
 
 | Dashboard | images   | images  | images  |   |
