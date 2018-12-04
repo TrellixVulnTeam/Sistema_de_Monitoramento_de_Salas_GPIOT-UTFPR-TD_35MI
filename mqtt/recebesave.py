@@ -63,7 +63,7 @@ def on_message(client, userdata, msg):
      Payload = str(msg.payload) + str(datetime.datetime.now())
      print "TOPICO: ",msg.topic,"payload: ",str(Payload)
      gravar_dado("luminosidade.csv",str(msg.topic),Payload,1)
-     sleep(0.1)
+     sleep(10)
 
 
 # clia um cliente para supervisã0

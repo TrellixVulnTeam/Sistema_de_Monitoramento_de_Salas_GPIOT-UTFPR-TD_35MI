@@ -81,7 +81,7 @@ def handle(msg):
 
 #TOKEN = sys.argv[1]  # get token from command-line
 
-bot = telepot.Bot('********** TOKENNN ***********')
+bot = telepot.Bot('742646411:AAEoSBH88Zslx3VL6lB6K6r7N6Cx4JLi-WY')
 MessageLoop(bot, handle).run_as_thread()
 print ('Listening ...')
 
