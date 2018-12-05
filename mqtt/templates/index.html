@@ -13,11 +13,7 @@
       <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat:200,300,400,600,700'>
       <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
       
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-      <link rel="stylesheet" href="css/style.css">
-
-  
+       
 </head>
 
 <body>
@@ -25,66 +21,77 @@
 <script type="text/javascript">
   setTimeout(function(){
     location = ''
-  },1000)
+  },8000)
 </script>
 
+<center>
+<div class="jumbotron jumbotron-fluid">  
+  <p class="lead"> 
+   
+    <a class="btn btn-primary btn-lg" href="index.html" role="button">Home</a>
+    <a class="btn btn-success btn-lg" href="http://192.168.100.3:8000/stream.html" role="button">Stream</a>
+    <a class="btn btn-warning btn-lg" href="graph.html" role="button">Graph</a>
+    <a  class="btn btn-danger btn-lg" href="system.html" role="button">System</a>
+<p>
+  <center> <div class="container">
+        <h1 class="display-4">Monitor IoT</h1>
+        <p class="lead">Status Sensores.</p>
+    </div> </center>
+    
+</div>
 
-<div class="jumbotron">
-   <h1 class="display-2">Visualização Janela </h1>
-
-
-   <p class="display-3">Status das Janelas</p>
-  </div>
 <br><br>
+
+
 <div class="container">
   
   <div class="row">
 
     <div class="col-sm-2">
-      <h5 class="h1">Ambiente: </h5>
+      <h5 class="my-4">Ambiente: </h5>
     </div>
 
     <div class="col-sm-4">
-      <p class="h2"><kbd>  {{ janela.Ambiente }} </kbd> </p>
+      <p class="my-4"> <kbd>  {{ janela.Ambiente }} </kbd> </p>
     </div>
     
     <div class="col-sm-2">
-      <h5 class="h1"> IoT: </h5>
+      <p class="my-4"> IoT: </h5>
     </div>
 
     <div class="col-sm-4">
-       <p class="display-4"> {{ janela.IoT }} </p>
+       <p class="my-4"> {{ janela.IoT }} </p>
     </div>
     <div class="col-sm-2">
-       <h5 class="h1"> ID: </h5>
+       <p class="my-4"> ID: </h5>
     </div>
 
     <div class="col-sm-4">
-       <p class="display-4"> {{ janela.ID }} </p>
+       <p class="my-4"> {{ janela.ID }} </p>
     </div>
 
     <div class="col-sm-2">
-      <h5 class="h1"> Status: </h5>
+      <p class="my-4"> Status: </h5>
     </div>
 
     <div class="col-sm-4">
-       <p class="display-4">
+       <p class="my-4">
        	 {{ janela.status }}</p>
     </div>
 
     <div class="col-sm-2">
-      <h5 class="h1"> Data: </h5>
+      <p class="my-4"> Data: </h5>
     </div>
 
     <div class="col-sm-4">
-       <p class="display-4"> {{ janela.Data }} </p>
+       <p class="my-4"> {{ janela.Data }} </p>
     </div>
     <div class="col-sm-2">
-      <h5 class="h1"> Hora: </h5>
+      <p class="my-4"> Hora: </h5>
     </div>
 
     <div class="col-sm-4">
-       <p class="display-4"> {{ janela.Hora }} </p>
+       <p class="my-4"> {{ janela.Hora }} </p>
     </div>
   </div>
  
@@ -92,50 +99,50 @@
  <div class="row">
 
     <div class="col-sm-2">
-      <h5 class="h1">Ambiente: </h5>
+      <p class="my-4">Ambiente: </h5>
     </div>
 
     <div class="col-sm-4">
-      <p class="h2"><kbd>  {{ luminosidade.Ambiente }} </kbd> </p>
+      <p class="my-4"> <kbd>  {{ luminosidade.Ambiente }} </kbd> </p>
     </div>
     
     <div class="col-sm-2">
-      <h5 class="h1"> IoT: </h5>
+      <p class="my-4">IoT: </h5>
     </div>
 
     <div class="col-sm-4">
-       <p class="display-4"> {{ luminosidade.IoT }} </p>
+       <p class="my-4"> {{ luminosidade.IoT }} </p>
     </div>
     <div class="col-sm-2">
-       <h5 class="h1"> ID: </h5>
+       <p class="my-4"> ID: </h5>
     </div>
 
     <div class="col-sm-4">
-       <p class="display-4"> {{ luminosidade.ID }} </p>
+       <p class="my-4"> {{ luminosidade.ID }} </p>
     </div>
 
     <div class="col-sm-2">
-      <h5 class="h1"> Status: </h5>
+      <p class="my-4"> Status: </h5>
     </div>
 
     <div class="col-sm-4">
-       <p class="display-4">
+       <p class="my-4">
          {{ luminosidade.status }}</p>
     </div>
 
     <div class="col-sm-2">
-      <h5 class="h1"> Data: </h5>
+      <p class="my-4"> Data: </h5>
     </div>
 
     <div class="col-sm-4">
-       <p class="display-4"> {{ luminosidade.Data }} </p>
+       <p class="my-4"> {{ luminosidade.Data }} </p>
     </div>
     <div class="col-sm-2">
-      <h5 class="h1"> Hora: </h5>
+      <p class="my-4"> Hora: </h5>
     </div>
 
     <div class="col-sm-4">
-       <p class="display-4"> {{ luminosidade.Hora }} </p>
+       <p class="my-4"> {{ luminosidade.Hora }} </p>
     </div>
   </div>
    
@@ -143,50 +150,54 @@
  <div class="row">
 
     <div class="col-sm-2">
-      <h5 class="h1">Ambiente: </h5>
+      <p class="my-4"> Ambiente: </h5>
     </div>
 
     <div class="col-sm-4">
-      <p class="h2"><kbd>  {{ door.Ambiente }} </kbd> </p>
+      <p class="my-4"> <kbd>  {{ door.Ambiente }} </kbd> </p>
     </div>
     
     <div class="col-sm-2">
-      <h5 class="h1"> IoT: </h5>
+      <p class="my-4"> IoT: </h5>
     </div>
 
     <div class="col-sm-4">
-       <p class="display-4"> {{ door.IoT }} </p>
+       <p class="my-4"> {{ door.IoT }} </p>
     </div>
     <div class="col-sm-2">
-       <h5 class="h1"> ID: </h5>
+       <p class="my-4"> ID: </h5>
     </div>
 
     <div class="col-sm-4">
-       <p class="display-4"> {{ door.ID }} </p>
-    </div>
-
-    <div class="col-sm-2">
-      <h5 class="h1"> Status: </h5>
-    </div>
-
-    <div class="col-sm-4">
-       <p class="display-4">
-         {{ door.status }}</p>
+       <p class="my-4"> {{ door.ID }} </p>
     </div>
 
     <div class="col-sm-2">
-      <h5 class="h1"> Data: </h5>
+      <p class="my-4"> Status: </h5>
     </div>
 
     <div class="col-sm-4">
-       <p class="display-4"> {{ door.Data }} </p>
+         {% if door.status == 1 %}
+           <p class="my-4">Ocupada</p>
+         {% else %}  
+           <p class="my-4">vaga</p>
+         {% endif %}
+
+    </div>
+
+    <div class="col-sm-2">
+      <p class="my-4"> Data: </h5>
+    </div>
+
+    <div class="col-sm-4">
+       <p class="my-4"> {{ door.Data }} </p>
     </div>
     <div class="col-sm-2">
-      <h5 class="h1"> Hora: </h5>
+      <p class="my-4"> Hora: </h5>
     </div>
 
     <div class="col-sm-4">
-       <p class="display-4"> {{ door.Hora }} </p>
+       <p class="my-4"> {{ door.Hora }} </p>
     </div>
   </div>
  

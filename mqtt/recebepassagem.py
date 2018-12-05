@@ -13,7 +13,7 @@ def csv_writer(data,path):
              writer.writerow(line)
 
 def pre_processing(topic,payload):
-    #print " +  ",payload
+    print " +  ",payload
     ambiente = topic.split("/")[1] 
     IoT = topic.split("/")[2] 
     ID = topic.split("/")[3]
@@ -21,7 +21,7 @@ def pre_processing(topic,payload):
     data = payload.split(" ")[2].split(".")[0]  
     hora =  payload.split(" ")[3]
     dados = [ambiente,IoT,ID,status,data,hora]
-    #print dados
+    print dados
     return [["AMBIENTE","DEVICE","ID","STATUS","DATA","HORA"],dados]
 
 def gravar_dado(arquivo,topic,payload):
@@ -36,17 +36,14 @@ def gravar_dado(arquivo,topic,payload):
          
 
 
-def passagem_count(value):
-
-    pass 
-
 def on_connect(self,client, data, rc):
     self.subscribe([(TOPIC,0)])
 
 def on_message(client, userdata, msg):
     Payload = str(msg.payload) + str(datetime.datetime.now())
     if "home/sala/porta/" in msg.topic: 	
-     print "TOPICO: ",msg.topic,"payload: ",str(Payload),"\n\n"
+     print "TOPICO: ",msg.topic
+     print "payload:",Payload
      gravar_dado("passagem.csv",str(msg.topic),Payload)
     #if "porta" in msg.topic:
     # print "TOPICO: ",msg.topic,"payload: ",str(Payload),"\n\n"
