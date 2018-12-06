@@ -29,16 +29,14 @@
 ## Atuador(extra)
 Quando tiver chovendo ou começando a chover, detector chuva AND tem alguem na sala avisa na sala para fechar janela
 
+## Tutorial Start Projetct !
 
-<<<<<<< HEAD
+[![Link]](https://www.youtube.com/watch?v=HmgL5kCg-3Y)
+
+[![Tutorial](./tutorial/4term.png)](https://www.youtube.com/watch?v=HmgL5kCg-3Y "Tutorial")
+
+
 ## Link Referencia
 
 https://pastebin.com/Qx07Q0Gz
-=======
-## Tutorial Start Projetct !
-
-Abra 5 terminais, de preferencia use terminator como terminal
-
-![5term](5term.png)
->>>>>>> eef6b843333c258b34bffd5a890a8c3b7422d810
 
