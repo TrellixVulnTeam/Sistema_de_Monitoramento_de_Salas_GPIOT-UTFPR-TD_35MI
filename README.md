@@ -30,3 +30,9 @@
 Quando tiver chovendo ou começando a chover, detector chuva AND tem alguem na sala avisa na sala para fechar janela
 
 
+## Tutorial Start Projetct !
+
+Abra 5 terminais, de preferencia use terminator como terminal
+
+![5term](5term.png)
+
