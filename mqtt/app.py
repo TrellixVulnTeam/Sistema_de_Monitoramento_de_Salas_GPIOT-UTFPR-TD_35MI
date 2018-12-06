@@ -46,5 +46,15 @@ def index():
 	Porta = entrada()
 	return render_template('index.html', janela=Windows,luminosidade=Luminosidade,door=Porta)
 
+@app.route("/graph.html")
+def stream():
+	return render_template('graph.html')
+
+
+@app.route("/system.html")
+def system():
+	return render_template('system.html')
+
+
 if __name__=="__main__":
 	app.run(host="0.0.0.0",port=8080,debug=True)

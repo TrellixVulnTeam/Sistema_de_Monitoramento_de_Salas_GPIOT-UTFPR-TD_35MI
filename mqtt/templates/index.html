@@ -28,9 +28,9 @@
 <div class="jumbotron jumbotron-fluid">  
   <p class="lead"> 
    
-    <a class="btn btn-primary btn-lg" href="index.html" role="button">Home</a>
-    <a class="btn btn-success btn-lg" href="http://192.168.100.3:8000/stream.html" role="button">Stream</a>
-    <a class="btn btn-warning btn-lg" href="graph.html" role="button">Graph</a>
+    <a class="btn btn-primary btn-lg" href="http://192.168.100.3:8080" role="button">Home</a>
+    <a class="btn btn-success btn-lg" href="http://192.168.100.3:8888/stream.html" role="button">Stream</a>
+    <a class="btn btn-warning btn-lg" href="/graph.html" role="button">Graph</a>
     <a  class="btn btn-danger btn-lg" href="system.html" role="button">System</a>
 <p>
   <center> <div class="container">
@@ -40,7 +40,6 @@
     
 </div>
 
-<br><br>
 
 
 <div class="container">
@@ -48,157 +47,98 @@
   <div class="row">
 
     <div class="col-sm-2">
-      <h5 class="my-4">Ambiente: </h5>
-    </div>
-
-    <div class="col-sm-4">
-      <p class="my-4"> <kbd>  {{ janela.Ambiente }} </kbd> </p>
+      <p class="my-2">Ambiente: <kbd> {{ janela.Ambiente }}</kbd> </p>
     </div>
     
     <div class="col-sm-2">
-      <p class="my-4"> IoT: </h5>
+      <p class="my-2"> IoT: {{ janela.IoT }} </p>
     </div>
 
-    <div class="col-sm-4">
-       <p class="my-4"> {{ janela.IoT }} </p>
-    </div>
+  
     <div class="col-sm-2">
-       <p class="my-4"> ID: </h5>
-    </div>
-
-    <div class="col-sm-4">
-       <p class="my-4"> {{ janela.ID }} </p>
+       <p class="my-2"> ID: {{ janela.ID }} </p>
     </div>
 
     <div class="col-sm-2">
-      <p class="my-4"> Status: </h5>
+      <p class="my-2"> Status: {{ janela.status }}</p>
     </div>
 
-    <div class="col-sm-4">
-       <p class="my-4">
-       	 {{ janela.status }}</p>
-    </div>
-
+  
     <div class="col-sm-2">
-      <p class="my-4"> Data: </h5>
+      <p class="my-2"> Data: {{ janela.Data }} </p>
     </div>
 
-    <div class="col-sm-4">
-       <p class="my-4"> {{ janela.Data }} </p>
-    </div>
+ 
     <div class="col-sm-2">
-      <p class="my-4"> Hora: </h5>
+      <p class="my-2"> Hora:   {{ janela.Hora }}  </p>
     </div>
 
-    <div class="col-sm-4">
-       <p class="my-4"> {{ janela.Hora }} </p>
-    </div>
   </div>
  
- <br><br>
  <div class="row">
 
     <div class="col-sm-2">
-      <p class="my-4">Ambiente: </h5>
-    </div>
-
-    <div class="col-sm-4">
-      <p class="my-4"> <kbd>  {{ luminosidade.Ambiente }} </kbd> </p>
+      <p class="my-2">Ambiente: <kbd>  {{ luminosidade.Ambiente }} </kbd> </p>
     </div>
     
     <div class="col-sm-2">
-      <p class="my-4">IoT: </h5>
-    </div>
-
-    <div class="col-sm-4">
-       <p class="my-4"> {{ luminosidade.IoT }} </p>
-    </div>
-    <div class="col-sm-2">
-       <p class="my-4"> ID: </h5>
-    </div>
-
-    <div class="col-sm-4">
-       <p class="my-4"> {{ luminosidade.ID }} </p>
+      <p class="my-2">IoT: {{ luminosidade.IoT }}  </p>
     </div>
 
     <div class="col-sm-2">
-      <p class="my-4"> Status: </h5>
+       <p class="my-2"> ID: {{ luminosidade.ID }} </p>
     </div>
 
-    <div class="col-sm-4">
-       <p class="my-4">
-         {{ luminosidade.status }}</p>
+
+
+    <div class="col-sm-2">
+      <p class="my-2"> Status:  {{ luminosidade.status }}</p>
+    </div>
+
+
+    <div class="col-sm-2">
+      <p class="my-2"> Data: {{ luminosidade.Data }} </p>
     </div>
 
     <div class="col-sm-2">
-      <p class="my-4"> Data: </h5>
+      <p class="my-2"> Hora:{{ luminosidade.Hora }}   </p>
     </div>
 
-    <div class="col-sm-4">
-       <p class="my-4"> {{ luminosidade.Data }} </p>
-    </div>
-    <div class="col-sm-2">
-      <p class="my-4"> Hora: </h5>
-    </div>
 
-    <div class="col-sm-4">
-       <p class="my-4"> {{ luminosidade.Hora }} </p>
-    </div>
   </div>
    
- <br><br>
  <div class="row">
 
     <div class="col-sm-2">
-      <p class="my-4"> Ambiente: </h5>
-    </div>
-
-    <div class="col-sm-4">
-      <p class="my-4"> <kbd>  {{ door.Ambiente }} </kbd> </p>
-    </div>
-    
-    <div class="col-sm-2">
-      <p class="my-4"> IoT: </h5>
-    </div>
-
-    <div class="col-sm-4">
-       <p class="my-4"> {{ door.IoT }} </p>
-    </div>
-    <div class="col-sm-2">
-       <p class="my-4"> ID: </h5>
-    </div>
-
-    <div class="col-sm-4">
-       <p class="my-4"> {{ door.ID }} </p>
+      <p class="my-2"> Ambiente: <kbd>  {{ door.Ambiente }} </p>
     </div>
 
     <div class="col-sm-2">
-      <p class="my-4"> Status: </h5>
+      <p class="my-2"> IoT: {{ door.IoT }} </p>
     </div>
 
-    <div class="col-sm-4">
-         {% if door.status == 1 %}
-           <p class="my-4">Ocupada</p>
-         {% else %}  
-           <p class="my-4">vaga</p>
-         {% endif %}
 
+    <div class="col-sm-2">
+       <p class="my-2"> ID: {{ door.ID }}  </p>
     </div>
 
     <div class="col-sm-2">
-      <p class="my-4"> Data: </h5>
+      <p class="my-2"> Status:
+             {% if door.status == 1 %}
+                   Ocupada
+             {% else %}  
+                   vago
+             {% endif %} </p>
     </div>
 
-    <div class="col-sm-4">
-       <p class="my-4"> {{ door.Data }} </p>
-    </div>
     <div class="col-sm-2">
-      <p class="my-4"> Hora: </h5>
+      <p class="my-2"> Data: {{ door.Data }} </p>
     </div>
 
-    <div class="col-sm-4">
-       <p class="my-4"> {{ door.Hora }} </p>
+    <div class="col-sm-2">
+      <p class="my-2"> Hora: {{ door.Hora }} </p>
     </div>
+
   </div>
  
   </div>

@@ -2,23 +2,43 @@
 <html>
 <head>
 	<title>Stream Sala</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+      <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat:200,300,400,600,700'>
+      <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
+      
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+      
+
 </head>
 <body>
 	<script type="text/javascript">
 	  setTimeout(function(){
 	    location = ''
-	  },1800)
+	  },1000)
 	</script>
 
 <center>
- <ul>
-  <li><a href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#about">About</a></li>
- </ul>
- <h3>Camera 1</h3>
-     <img src="../../../CursoOpenCVcomDaniel/face.jpg"> 
+<div class="jumbotron jumbotron-fluid">
+ <p class="lead"> 
+   
+    <a class="btn btn-primary btn-lg" href="http://192.168.100.3:8080" role="button">Home</a>
+    <a class="btn btn-success btn-lg" href="http://192.168.100.3:8888/stream.html" role="button">Stream</a>
+    <a class="btn btn-warning btn-lg" href="/graph.html" role="button">Graph</a>
+    <a  class="btn btn-danger btn-lg" href="system.html" role="button">System</a>
+  </p>
+
+    <center> <div class="container">
+        <h1 class="display-4">Monitor IoT</h1>
+        <p class="lead">Status Sensores.</p>
+    </div> </center>
+
+
+	<h3>Camera 1</h3>
+	
+       <img src="{{url_for('static', filename='face.jpg')}}" />
+
 
 </center>
 </body>
