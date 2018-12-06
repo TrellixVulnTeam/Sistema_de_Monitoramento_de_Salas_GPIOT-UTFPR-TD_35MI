@@ -40,3 +40,16 @@ Quando tiver chovendo ou começando a chover, detector chuva AND tem alguem na s
 
 https://pastebin.com/Qx07Q0Gz
 
+
+## Definir Sensores
+
+Sensores e Atuadores(Mauricio- Edson Fala com ELE)
+
+* Sensor Passagem
+* Gravar Filtro Inteligente Ruido
+* Tem Gente na Sala
+* Sensor Otico
+* Investiar 
+* Ultrasom 
+* Otico
+* IR

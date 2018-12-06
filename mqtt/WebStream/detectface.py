@@ -4,7 +4,7 @@ import sys
 import paho.mqtt.client as mqtt
 
 client = mqtt.Client()
-client.connect("192.168.100.3", 1883)
+client.connect("192.168.43.32", 1883)
 
 
 x=0
