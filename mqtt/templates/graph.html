@@ -36,7 +36,11 @@
   <center> <div class="container">
         <h1 class="display-4">Monitor IoT</h1>
         <p class="lead">Graficos.</p>
-    </div> </center>
+    </div> 
+   
+    {% block content %} {{chart|safe}} {% endblock %}
+    
+  </center>
     
 </div>
 
