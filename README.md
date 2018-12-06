@@ -31,6 +31,8 @@ Quando tiver chovendo ou começando a chover, detector chuva AND tem alguem na s
 
 ## Tutorial Start Projetct !
 
+[![Link]](https://www.youtube.com/watch?v=HmgL5kCg-3Y)
+
 [![Tutorial](./tutorial/4term.png)](https://www.youtube.com/watch?v=HmgL5kCg-3Y "Tutorial")
 
 
