@@ -30,3 +30,7 @@
 Quando tiver chovendo ou começando a chover, detector chuva AND tem alguem na sala avisa na sala para fechar janela
 
 
+## Link Referencia
+
+https://pastebin.com/Qx07Q0Gz
+
