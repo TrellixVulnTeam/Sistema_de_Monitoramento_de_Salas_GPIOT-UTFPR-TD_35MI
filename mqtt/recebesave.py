@@ -51,6 +51,7 @@ def on_connect(self,client, data, rc):
 
  
 def on_message(client, userdata, msg):
+    sleep(2)
     if ("/sala/janela/01/status/" in msg.topic):
      Payload = str(msg.payload) + str(datetime.datetime.now())
      print "TOPICO: ",msg.topic,"payload: ",str(Payload)
@@ -63,7 +64,6 @@ def on_message(client, userdata, msg):
      Payload = str(msg.payload) + str(datetime.datetime.now())
      print "TOPICO: ",msg.topic,"payload: ",str(Payload)
      gravar_dado("luminosidade.csv",str(msg.topic),Payload,1)
-     sleep(10)
 
 
 # clia um cliente para supervisã0
@@ -74,7 +74,7 @@ client.on_connect = on_connect
 client.on_message = on_message
 
 # conecta no broker
-client.connect("127.0.0.1", 1883)
+client.connect("192.168.100.10", 1883)
 
 # permace em loop, recebendo mensagens
 client.loop_forever()
