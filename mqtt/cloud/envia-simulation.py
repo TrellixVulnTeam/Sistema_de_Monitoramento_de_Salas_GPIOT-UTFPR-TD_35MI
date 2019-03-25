@@ -8,7 +8,8 @@ import pyautogui
 client = mqtt.Client()
 # conecta no broker
 client.connect("192.168.43.32", 1883)
-
+token = "4iKMYCTSyskXTtP80fpn"
+server = "200.134.31.225"
 # "bloco/E/lab/302/SENSOR/JANELA/1
 # "home/sala/janela/01/status/"
 while True:
