@@ -1,0 +1,18 @@
+PINS,CMD
+{7: ['a','b'],
+11: ['c','d'],
+12,True
+13,False
+15,False
+16,False
+18,True
+22,False
+29,True
+31,False
+32,True
+33,False
+35,False
+36,True
+37,False
+38,True
+40,False
