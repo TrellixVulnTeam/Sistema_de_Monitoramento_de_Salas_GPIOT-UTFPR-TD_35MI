@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br" >
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>DashBoard</title>
+  
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+      <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat:200,300,400,600,700'>
+      <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
+      
+       
+</head>
+
+<body>
+
+<script type="text/javascript">
+  setTimeout(function(){
+    location = ''
+  },8000)
+</script>
+
+<center>
+<div class="jumbotron jumbotron-fluid">  
+  <p class="lead"> 
+   
+    <a class="btn btn-primary btn-lg" href="http://192.168.43.32:8080" role="button">Home</a>
+    <a class="btn btn-success btn-lg" href="http://192.168.43.32:8888/stream.html" role="button">Stream</a>
+    <a class="btn btn-warning btn-lg" href="/graph.html" role="button">Graph</a>
+    <a  class="btn btn-danger btn-lg" href="system.html" role="button">System</a>
+<p>
+  <center> <div class="container">
+        <h1 class="display-4">Monitor IoT</h1>
+        <p class="lead">Graficos.</p>
+    </div> 
+   
+    {% block content %} {{chart|safe}} {% endblock %}
+    
+  </center>
+    
+</div>
+
+ 
+
+
+
+
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js'></script>
+
+  
+
+</body>
+
+</html>

@@ -29,4 +29,27 @@
 ## Atuador(extra)
 Quando tiver chovendo ou começando a chover, detector chuva AND tem alguem na sala avisa na sala para fechar janela
 
+## Tutorial Start Projetct !
 
+[![Link]](https://www.youtube.com/watch?v=HmgL5kCg-3Y)
+
+[![Tutorial](./tutorial/4term.png)](https://www.youtube.com/watch?v=HmgL5kCg-3Y "Tutorial")
+
+
+## Link Referencia
+
+https://pastebin.com/Qx07Q0Gz
+
+
+## Definir Sensores
+
+Sensores e Atuadores(Mauricio- Edson Fala com ELE)
+
+* Sensor Passagem
+* Gravar Filtro Inteligente Ruido
+* Tem Gente na Sala
+* Sensor Otico
+* Investiar 
+* Ultrasom 
+* Otico
+* IR
