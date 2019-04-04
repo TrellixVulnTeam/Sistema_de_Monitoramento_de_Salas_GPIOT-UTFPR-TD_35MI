@@ -1,16 +1,16 @@
 #include <PubSubClient.h>
 #include <ESP8266WiFi.h>
 
-#define WIFI_AP "tapodi"
-#define WIFI_PASSWORD "naolembro"
+#define WIFI_AP "WIFI ESSID"
+#define WIFI_PASSWORD "PASSWORD WIFI"
 
-#define TOKEN "Ehaj6xJkIX1HMNa2NGIH"
+#define TOKEN "TOKEN"
 
 // DHT
 #define DHTPIN 2
 #define DHTTYPE DHT22
 
-char thingsboardServer[] = "192.168.100.2";
+char thingsboardServer[] = "IP SERVER";
 
 WiFiClient wifiClient;
 
