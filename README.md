@@ -23,7 +23,7 @@
 
 ## DashBoard de Monitoramento de Status de janela
 
-![Banana](luminosidade.png)
+![Banana](https://raw.githubusercontent.com/juanengml/Sistema_de_Monitoramento_de_Salas_GPIOT-UTFPR-TD/master/img/luminosidade.png)
 
 
 ## Atuador(extra)
